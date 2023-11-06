@@ -1,0 +1,24 @@
+// Writing to a text file test.txt using C++ FileStream Programming.
+
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+     cout<<"My Name Is Bhalani Pal"<<endl;
+    cout<<"En_no :: 220130318080 "<<endl;
+	
+    ofstream filestream("test.txt");
+	
+    if(filestream.is_open())
+    {
+		filestream<<"Welcome to the Dr. Subhash University";
+		filestream<<"This is C++ Subject.";
+		filestream.close();
+	}
+	else
+	{
+		cout<<"File Opening is fail";
+	}
+	return 0;
+}
