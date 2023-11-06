@@ -1,0 +1,30 @@
+// Write a Program to read a text file and count number of characters in it.
+
+#include <iostream>
+#include <fstream>
+#include <string>
+int main() 
+{
+   cout<<"My Name Is Bhalani Pal"<<endl;
+    cout<<"En_no :: 220130318080 "<<endl;
+    
+    std::ifstream file;
+    char character;
+    int character_count = 0;
+    file.open("test.txt");
+    
+    if (!file.is_open()) {
+        std::cout << "Unable to open the file." << std::endl;
+        return 1;
+    }
+    
+    while (file.get(character)) 
+    {
+        character_count++;
+    }
+    
+    file.close();
+    std::cout << "Number of characters in the file: " << character_count << std::endl;
+    
+    return 0;
+}
